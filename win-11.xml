@@ -8,7 +8,7 @@
   </metadata>
   <memory unit="KiB">25165824</memory>
   <currentMemory unit="KiB">25165824</currentMemory>
-  <vcpu placement="static">10</vcpu>
+  <vcpu placement="static">8</vcpu>
   <iothreads>1</iothreads>
   <cputune>
     <vcpupin vcpu="0" cpuset="2"/>
