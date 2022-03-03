@@ -33,9 +33,9 @@ elif [ -d "$HOOKPATH" ]; then
 fi
 
 if [[ $HOOK_NAME == "prepare" ]]; then
-    systemctl set-property --runtime -- system.slice AllowedCPUs=0,1
-    systemctl set-property --runtime -- user.slice AllowedCPUs=0,1
-    systemctl set-property --runtime -- init.scope AllowedCPUs=0,1
+    systemctl set-property --runtime -- system.slice AllowedCPUs=0,1,6,7
+    systemctl set-property --runtime -- user.slice AllowedCPUs=0,1,6,7
+    systemctl set-property --runtime -- init.scope AllowedCPUs=0,1,6,7
 elif [[ $HOOK_NAME == "release" ]]; then
     systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
     systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
